@@ -1,0 +1,320 @@
+.color1 {
+    color: #89ffe7;
+    color: #3ca08c;
+    color: #327c6e;
+}
+
+.color2 {
+    color: #dbffc7;
+    color: #5d993a;
+    color: #457728;
+}
+
+.color3 {
+    color: #ff84bd;
+    color: #923c64;
+    color: #692a4a;
+    
+
+}
+.color4 {
+    color: #f5b18a;
+    color: #b96f3e;
+    color: #af5a32;
+}
+
+.color5 {
+    color: #ff868c;
+}
+
+title {
+    font-family: "Jersey 10";
+}
+
+body {
+    font-family: "Jersey 10";
+    font-weight: 400;
+    font-style: normal;
+}
+
+#botonSonido{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1%;
+}
+#boton-sonido{
+    border-style: none;
+    background-color: transparent;
+}
+#switch-sonido{
+    transition: all 0.25s ease-in-out;
+}
+
+.fade{
+    opacity: 1;
+}
+
+.fade-out{
+    opacity: 0.7;
+}
+
+.titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+}
+
+.titulo h1 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.1%;
+}
+
+.area-juego {
+    border-radius: 5px;
+    border-style: double;
+    border-width: 3px;
+    padding: 5%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+.puntos-dado {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-iniciar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+.lanzar-pasar-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.lanzar-pasar {
+    width: 100%;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 3px;
+    margin-top: 1%;
+}
+
+.boton {
+    font-family: "Jersey 10";
+    font-size: 1.5em;
+    border-radius: 5px;
+    min-width: fit-content;
+    width: 15%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-style: double;
+    border-width: 8px;
+    background-color: slategray;
+    border-color: whitesmoke;
+    color: whitesmoke;
+}
+
+.puntos {
+    display: none;
+    padding-top: 1%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2em;
+    transition: color 0.1s ease-in-out
+}
+
+.dado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+}
+
+.col {
+    width: 33.33%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.jugador {
+    display: none;
+    height: 100%;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 3px;
+    font-size: 1.5em;
+    padding-left: 10%;
+}
+
+.iniciar-juego {
+    border-radius: 5px;
+    border-style: double;
+    border-width: 8px;
+    padding: 1%;
+}
+.seleccionJuego {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.seleccionJuego select {
+    margin-left: 1%;
+    border-radius: 5px;
+    font-family: "Jersey 10";
+    font-size: 0.7em;
+    text-align: center;
+    width: fit-content;
+    min-width: 4%;
+}
+
+.seleccionJuego p {
+    font-size: 0.7em;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.shake {
+    animation: shake 0.08s ease-in-out 3;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-0.30%);
+    }
+
+    75% {
+        transform: translateX(0.30%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.color-turno{
+    background-color: slategray;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    border-width: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.boton:active {
+    transition: background-color 0s !important;
+    background-color: rgb(73, 69, 69) !important;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.7em; 
+    }
+    .color-turno{
+        background-color: slategray;
+        color: whitesmoke;
+        border-color: whitesmoke;
+        border-width: 4px;
+        transition: all 0.5s ease-in-out;
+        padding: 1%;
+        margin: 1%;
+    }
+    .boton {
+        font-family: "Jersey 10";
+        font-size: 2em;
+        border-radius: 5px;
+        min-width: fit-content;
+        width: 15%;
+        margin-left: 2%;
+        margin-right: 2%;
+        border-style: double;
+        border-width: 4px;
+        background-color: slategray;
+        border-color: whitesmoke;
+        color: whitesmoke;
+        height: 50px;
+    }
+    .iniciar-juego {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        border-radius: 5px;
+        border-style: double;
+        border-width: 4px;
+        padding: 1%;
+        padding-top: 2.5vh;
+        margin-top: 6.5vh;
+    }
+
+    .iniciar-juego select {
+        width: 20%;
+        margin-left: 2%;
+    }
+
+    #iniciar {
+        font-size: 1em;
+    }
+
+    #puntaje-ganar {
+        margin-top: 5vh;
+    }
+
+    #puntaje-turno {
+        margin-top: 2.5vh;
+        margin-bottom: 2.5vh;
+    }
+
+    .area-juego {
+        border-radius: 5px;
+        border-style: double;
+        border-width: 3px;
+        padding: 1%;
+        padding-bottom: 5vh;
+        padding-top: 17.5vh;
+        margin: 1%;
+        min-height: 50vh;
+    }
+    .col {
+        width: 33.33%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .jugador {
+        padding: 5%;
+    }
+
+    .titulo {
+        margin-top: 2.5vh;
+        margin-bottom: 2.5vh;
+    }
+    select {
+        width: 5vh;
+    }
+}

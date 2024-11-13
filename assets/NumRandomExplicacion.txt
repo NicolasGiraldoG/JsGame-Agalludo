@@ -1,0 +1,46 @@
+Este código genera un número aleatorio entero dentro de un rango específico, determinado por los valores `min` (el valor mínimo) y `max` (el valor máximo).
+
+Explicación detallada:
+
+```JavaScript 
+
+function NumRandom(min, max) {
+
+    Math.floor(Math.random() * (max - min + 1)) + min;
+
+}
+
+```
+
+1. **`Math.random()`**:
+   - Esta función devuelve un número decimal aleatorio entre 0 [inclusive] y 1 (exclusivo), es decir, un valor en el intervalo [0, 1).
+   - Ejemplo: podría devolver algo como `0.732`.
+
+2. **`Math.random() * (max - min + 1)`**:
+   - Multiplicamos el número aleatorio obtenido por la diferencia entre `max` y `min` más 1.
+   - Esto genera un número decimal aleatorio en el intervalo [0, `max - min + 1`), lo que significa que el resultado estará en el rango `[0, max - min + 1)` (es decir, sin incluir `max - min + 1`).
+   - Ejemplo: Si `min = 5` y `max = 10`, esto generaría un número aleatorio entre 0 y 6 ((10 - 5) + 1) (pero siempre decimal).
+
+3. **`Math.floor(...)`**:
+   - La función `Math.floor()` redondea el número decimal hacia abajo, es decir, lo convierte en el entero más cercano que sea menor o igual al número.
+   - Esto elimina la parte decimal del número, convirtiéndolo en un número entero.
+   - Siguiendo el ejemplo anterior: si el resultado de `Math.random() * (max - min + 1)` es `3.72`, `Math.floor()` lo redondeará a `3`.
+
+4. **`+ min`**:
+   - Finalmente, se suma `min` al valor obtenido.
+   - Este paso "desplaza" el número generado al rango deseado, asegurándose de que el valor final esté dentro del intervalo `[min, max]`.
+   - Siguiendo con el ejemplo, si el valor calculado es `3` y `min = 5`, el resultado final será `3 + 5 = 8`.
+
+### Ejemplo con valores:
+
+Supongamos que `min = 5` y `max = 10`.
+
+- Primero, `Math.random()` genera un número aleatorio entre 0 y 1, supongamos que sea `0.72`.
+- Luego, multiplicamos `0.72 * (10 - 5 + 1)` = `0.72 * 6 = 4.32`.
+- Aplicamos `Math.floor(4.32)`, lo que da como resultado `4`.
+- Finalmente, sumamos `min` (que es 5), por lo que `4 + 5 = 9`.
+
+El valor aleatorio final será `9`, que es un número dentro del rango [5, 10].
+
+### En resumen:
+Este código genera un número aleatorio entero entre `min` y `max`, ambos incluidos, utilizando una combinación de funciones matemáticas para ajustar el valor dentro del rango deseado.
